@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gonzalez ProWash - Professional Pressure Washing Miami</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: white;
+      border-bottom: 1px solid #ddd;
+      padding: 1rem 2rem;
+      z-index: 100;
+    }
+
+    header .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #d97706;
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 1rem;
+    }
+
+    nav a:hover {
+      color: #d97706;
+    }
+
+    .btn {
+      background: #d97706;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn:hover {
+      background: #b45309;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0d1b2a 0%, #1a4d6d 100%);
+      color: white;
+      padding: 8rem 2rem;
+      text-align: center;
+      min-height: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .stats {
+      background: #f5f5f5;
+      padding: 4rem 2rem;
+    }
+
+    .stats-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .stat {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .stat-number {
+      font-size: 36px;
+      color: #d97706;
+      font-weight: bold;
+    }
+
+    .stat-label {
+      color: #666;
+      margin-top: 0.5rem;
+    }
+
+    section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    section h2 {
+      font-size: 36px;
+      margin-bottom: 2rem;
+      color: #0d1b2a;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #eee;
+      border-radius: 8px;
+      padding: 2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 0.5rem;
+      color: #0d1b2a;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 14px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .cta h2 {
+      color: white;
+    }
+
+    .cta p {
+      color: white;
+      font-size: 18px;
+      margin-bottom: 2rem;
+    }
+
+    .phone-btn {
+      background: white;
+      color: #d97706;
+      padding: 15px 30px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 18px;
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .phone-btn:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      background: #f5f5f5;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-family: inherit;
+    }
+
+    footer {
+      background: #0d1b2a;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .blue-bg {
+      background: #0d1b2a;
+      color: white;
+    }
+
+    .blue-bg h2 {
+      color: white;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .why-card {
+      padding: 1.5rem;
+      border-left: 3px solid #d97706;
+    }
+
+    .why-card h3 {
+      color: white;
+      margin-bottom: 0.5rem;
+    }
+
+    .why-card p {
+      color: rgba(255,255,255,0.9);
+    }
+
+    @media (max-width: 768px) {
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero h1 {
+        font-size: 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">💧 ProWash Miami</div>
+      <div>
+        <a href="#services">Services</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <button class="btn" onclick="location.href='tel:(786)429-6999'">Call Now</button>
+      </div>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>Your Home Deserves to Shine</h1>
+    <p>Professional pressure washing services in Miami. 5.0★ rated with 10+ verified reviews.</p>
+    <div class="hero-buttons">
+      <button class="btn" onclick="location.href='tel:(786)429-6999'">📞 Call (786) 429-6999</button>
+      <button class="btn" style="background: white; color: #d97706;" onclick="document.getElementById('contact').scrollIntoView()">Get Free Quote</button>
+    </div>
+  </section>
+
+  <div class="stats">
+    <div class="stats-container">
+      <div class="stat">
+        <div class="stat-number">5.0★</div>
+        <div class="stat-label">Customer Rating</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">10+</div>
+        <div class="stat-label">Verified Reviews</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">24/7</div>
+        <div class="stat-label">Always Available</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">100%</div>
+        <div class="stat-label">Satisfaction Guaranteed</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>🏠 House Exterior</h3>
+        <p>Complete home cleaning including siding, roofing, gutters, and windows.</p>
+      </div>
+      <div class="card">
+        <h3>🛣️ Driveway & Walkway</h3>
+        <p>Remove stains, algae, and dirt from concrete surfaces professionally.</p>
+      </div>
+      <div class="card">
+        <h3>🪵 Deck & Patio</h3>
+        <p>Restore wooden decks and outdoor patios to like-new condition.</p>
+      </div>
+      <div class="card">
+        <h3>💼 Commercial</h3>
+        <p>Large-scale pressure washing for businesses and storefronts.</p>
+      </div>
+      <div class="card">
+        <h3>🏊 Pool Deck</h3>
+        <p>Keep your pool area pristine and safe with professional cleaning.</p>
+      </div>
+      <div class="card">
+        <h3>⭐ Custom Projects</h3>
+        <p>Specialized cleaning for unique surfaces and challenging projects.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="blue-bg">
+    <h2>Why Choose Gonzalez ProWash?</h2>
+    <div class="why-grid">
+      <div class="why-card">
+        <h3>✓ 24/7 Availability</h3>
+        <p>Always ready to serve you, whenever you need us.</p>
+      </div>
+      <div class="why-card">
+        <h3>✓ Honest Pricing</h3>
+        <p>No surprises, no hidden fees. Transparent pricing.</p>
+      </div>
+      <div class="why-card">
+        <h3>✓ Professional Quality</h3>
+        <p>Top equipment and proven techniques for perfect results.</p>
+      </div>
+      <div class="why-card">
+        <h3>✓ Fully Insured</h3>
+        <p>Licensed and insured for complete peace of mind.</p>
+      </div>
+      <div class="why-card">
+        <h3>✓ Fast Service</h3>
+        <p>Quick turnaround without compromising quality.</p>
+      </div>
+      <div class="why-card">
+        <h3>✓ 100% Satisfaction</h3>
+        <p>Guaranteed satisfaction on every job.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <h2>What Customers Say</h2>
+    <div class="grid">
+      <div class="card">
+        <p style="color: #d97706; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p>"The results were outstanding, my home looks so much cleaner and refreshed. Very professional!"</p>
+        <p style="font-weight: bold; margin-top: 1rem; color: #0d1b2a;">— Elizabeth Garcia</p>
+      </div>
+      <div class="card">
+        <p style="color: #d97706; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p>"Very happy with the service. On time, communicated well, and top-notch work. Highly recommend!"</p>
+        <p style="font-weight: bold; margin-top: 1rem; color: #0d1b2a;">— Sandra Dennis</p>
+      </div>
+      <div class="card">
+        <p style="color: #d97706; margin-bottom: 0.5rem;">⭐⭐⭐⭐⭐</p>
+        <p>"Thanks to them my house looks new again. Definitely recommend them!"</p>
+        <p style="font-weight: bold; margin-top: 1rem; color: #0d1b2a;">— Blessup TUBE</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Transform Your Property?</h2>
+    <p>Get your free quote today — call 24/7</p>
+    <a href="tel:(786)429-6999" class="phone-btn">(786) 429-6999</a>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Get In Touch</h2>
+    <div class="contact-grid">
+      <div>
+        <h3>Contact Information</h3>
+        <p><strong>📍 Address:</strong> 22490 SW 107th Ct, Miami, FL 33170</p>
+        <p><strong>📞 Phone:</strong> <a href="tel:(786)429-6999" style="color: #d97706;">(786) 429-6999</a></p>
+        <p><strong>🕒 Hours:</strong> Available 24/7</p>
+        <p><strong>⭐ Rating:</strong> 5.0★ (10+ verified reviews)</p>
+      </div>
+      <div>
+        <h3>Request A Free Quote</h3>
+        <form class="contact-form" onsubmit="handleSubmit(event)">
+          <input type="text" placeholder="Your Name" required>
+          <input type="tel" placeholder="Phone Number" required>
+          <input type="text" placeholder="Property Type">
+          <textarea placeholder="Tell us about your project..." rows="4"></textarea>
+          <button class="btn" type="submit">Get Free Quote</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Gonzalez ProWash Services LLC | 5.0★ Rating (10+ reviews)</p>
+  </footer>
+
+  <script>
+    function handleSubmit(e) {
+      e.preventDefault();
+      alert('Thank you! We will call you back shortly.');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
